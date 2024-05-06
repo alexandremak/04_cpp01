@@ -5,26 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 22:14:33 by amak              #+#    #+#             */
-/*   Updated: 2024/05/06 23:13:03 by amak             ###   ########.fr       */
+/*   Created: 2024/05/06 23:19:20 by amak              #+#    #+#             */
+/*   Updated: 2024/05/06 23:40:55 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include <fstream>
 #include <iostream>
 
-int main() {
-	std::string string = "HI THIS IS BRAIN";
-	std::string *stringPTR = &string;
-	std::string &stringREF = string;
-
-	std::cout << "&string - memory address: " << &string << std::endl;
-	std::cout << "stringPTR - memory address: "<< stringPTR << std::endl;
-	std::cout << "&stringREF - memory address: "<< &stringREF << std::endl;
+int main(int argc, char **argv) {
+	if (argc <= 3) {
+		std::cout << "Error: invalid number of parameters!" << std::endl;
+		return (1);
+	}
 	
-	std::cout << std::endl;
+	std::ofstream	filename(argv[1], std::ios::app);
+	std::string		s1(argv[2]);
+	std::string		s2(argv[3]);
 
-	std::cout << "string - value: " << string << std::endl;
-	std::cout << "*stringPTR - value: "<< *stringPTR << std::endl;
-	std::cout << "stringREF - value: "<< stringREF << std::endl;
+	if(filename.is_open()) {
+		filename
+	}
+	else {
+		std::cout << "Error: insert a valid filename!" << std::endl;
+		return (1);
+	}
 }
