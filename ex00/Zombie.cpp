@@ -1,0 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/02 23:19:38 by amak              #+#    #+#             */
+/*   Updated: 2024/05/03 23:33:26 by amak             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Zombie.hpp"
+
+Zombie::Zombie(std::string zombieName) : name(zombieName) {}
+
+Zombie::~Zombie() {
+	std::cout << this->name << " has been destroyed!" << std::endl; 
+}
+
+void	Zombie::announce(void) {
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+}
