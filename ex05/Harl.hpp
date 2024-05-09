@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 13:36:10 by amak              #+#    #+#             */
-/*   Updated: 2024/05/09 21:06:48 by amak             ###   ########.fr       */
+/*   Created: 2024/05/09 18:50:27 by amak              #+#    #+#             */
+/*   Updated: 2024/05/09 20:00:06 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-Zombie *zombieHorde(int N, std::string name) {
-	if (N < 1)
-	{
-		std::cout << "Invalid number of zombies!" << std::endl;
-		return NULL;
-	}
+# include <iostream>
 
-	Zombie *horde = new Zombie[N];
-	if (!horde)
-		return NULL;
-	for (int i = 0; i < N; i++) 
-		horde[i].setName(name);
-	return horde;	
-}
+class Harl
+{
+private:
+	void	debug(void);
+	void	info(void);
+	void	warning(void);
+	void	error(void);
+	
+public:
+	Harl();
+	~Harl();
+	void	complain(std::string level);
+};
+
+#endif
