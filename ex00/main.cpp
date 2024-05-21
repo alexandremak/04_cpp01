@@ -6,7 +6,7 @@
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 23:10:09 by amak              #+#    #+#             */
-/*   Updated: 2024/05/03 23:32:45 by amak             ###   ########.fr       */
+/*   Updated: 2024/05/20 21:56:30 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int	main() {
 	stackZombie.announce();
 	
 	Zombie *heapZombie = newZombie("Heap Zombie");
-	heapZombie->announce();
-	delete heapZombie;
-
+	if (heapZombie) {
+		heapZombie->announce();
+		delete heapZombie;
+	}
 	randomChump("Random Chump Zombie");	
 }
