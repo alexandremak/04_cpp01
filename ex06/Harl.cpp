@@ -6,7 +6,7 @@
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:33:36 by amak              #+#    #+#             */
-/*   Updated: 2024/05/15 18:05:41 by amak             ###   ########.fr       */
+/*   Updated: 2024/05/21 18:44:13 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	Harl::error(void) {
 
 void	Harl::complain(std::string level) {
 	std:: string	levels[4];
-	int				found = 0;
 	int				i;
 
 	levels[0] = "DEBUG";

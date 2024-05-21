@@ -6,7 +6,7 @@
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 22:14:33 by amak              #+#    #+#             */
-/*   Updated: 2024/05/06 23:13:03 by amak             ###   ########.fr       */
+/*   Updated: 2024/05/21 17:16:29 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main() {
 	std::string *stringPTR = &string;
 	std::string &stringREF = string;
 
+	std::cout << std::endl;
+
 	std::cout << "&string - memory address: " << &string << std::endl;
 	std::cout << "stringPTR - memory address: "<< stringPTR << std::endl;
 	std::cout << "&stringREF - memory address: "<< &stringREF << std::endl;
@@ -27,4 +29,9 @@ int main() {
 	std::cout << "string - value: " << string << std::endl;
 	std::cout << "*stringPTR - value: "<< *stringPTR << std::endl;
 	std::cout << "stringREF - value: "<< stringREF << std::endl;
+
+	std::cout << std::endl;
+
+	stringREF = "HI BRAIN";
+	std::cout << "string - value: " << string << std::endl;
 }
