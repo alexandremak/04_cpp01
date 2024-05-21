@@ -6,15 +6,15 @@
 #    By: amak <amak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/02 23:06:49 by amak              #+#    #+#              #
-#    Updated: 2024/05/03 20:46:16 by amak             ###   ########.fr        #
+#    Updated: 2024/05/21 22:00:20 by amak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BraiiiiiiinnnzzzZ
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SOURCES = 	Zombie.cpp \
 			newZombie.cpp \
@@ -26,7 +26,7 @@ OBJECTS = $(SOURCES:.cpp=.o)
 all: $(NAME)
 	
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(NAME)
 	
 clean:
 	@rm -f $(OBJECTS)

@@ -6,7 +6,7 @@
 /*   By: amak <amak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:19:20 by amak              #+#    #+#             */
-/*   Updated: 2024/05/07 23:22:37 by amak             ###   ########.fr       */
+/*   Updated: 2024/05/21 22:18:51 by amak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_replace(std::ifstream *input, std::ofstream *output,
 	std::string line;
 	
 	while(std::getline(*input, line)) {
-		int flagReplace = line.find(original);
+		size_t flagReplace = line.find(original);
 		if (line.length() < 1) {
 			*output << std::endl;
 			continue;
@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
 	}
 	
 	std::string		outputFile = inputFile + ".replace"; 
-	std::ofstream	output(outputFile, std::ios::app);
+	std::ofstream	output(outputFile.c_str(), std::ios::app);
 	
 	if (!output) {
 		std::cout << "Error: unable to create output file!" << std::endl;

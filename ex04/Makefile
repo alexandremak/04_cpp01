@@ -6,15 +6,15 @@
 #    By: amak <amak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 23:16:40 by amak              #+#    #+#              #
-#    Updated: 2024/05/07 23:21:58 by amak             ###   ########.fr        #
+#    Updated: 2024/05/21 22:14:46 by amak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = SedIsForLosers
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SOURCES = main.cpp
 			
@@ -23,7 +23,7 @@ OBJECTS = $(SOURCES:.cpp=.o)
 all: $(NAME)
 	
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(NAME)
 	
 clean:
 	@rm -f $(OBJECTS)

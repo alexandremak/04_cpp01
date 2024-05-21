@@ -6,15 +6,15 @@
 #    By: amak <amak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 13:33:09 by amak              #+#    #+#              #
-#    Updated: 2024/05/03 20:53:07 by amak             ###   ########.fr        #
+#    Updated: 2024/05/21 22:01:22 by amak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = MoarBrainz
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SOURCES = 	Zombie.cpp \
 			zombieHorde.cpp \
@@ -25,7 +25,7 @@ OBJECTS = $(SOURCES:.cpp=.o)
 all: $(NAME)
 	
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(NAME)
 	
 clean:
 	@rm -f $(OBJECTS)
